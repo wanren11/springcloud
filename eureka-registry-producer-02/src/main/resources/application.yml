@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-registry-producer
+
+server:
+  port: 2002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  instance:
+    instanceId: ${spring.application.name}

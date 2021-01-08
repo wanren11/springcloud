@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka-registry-consumer-original
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+server:
+  port: 3001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
